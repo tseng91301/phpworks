@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+	
+        <head>
+            <meta charset="utf-8"/>
+	        <title>教學文首頁</title>
+	        <link href="/module/style.css" rel="stylesheet" >
+			<meta http-equiv="refresh" content="3;/eduindex/contents.html">
+        </head>
+        <body>
+			
+            <div class="wrap">
+                <div class="header">
+                    <h1>歡迎來到Blacktech server的教學網頁</h1>
+                </div>
+                <div class="content">
+                    <div class="left">
+						
+                    </div>
+                    <div class="center">
+						<h3>這裡有各式各樣的程式設計或伺服器管理的相關教學，並且不斷更新喔!!</h3>
+                        <pre>
+                            話說這裡好像沒有什麼欸?!
+                                沒關係，再<strong>3秒後</strong>導向到目錄...
+                        </pre>
+					</div>
+                </div>
+                
+                <div class="clearfix"></div>
+                <div class="footer">
+				</div>
+            </div>
+			<script src="/module/jquery.min.js"></script>
+			<script>
+				$(function(){
+					/*公共部分
+					 * 導航欄
+					 * footer CopyRight
+					 */
+					$(".left").load("/module/content.html");
+					$(".footer").load("/module/footer.html");
+					
+				});
+			</script>
+        </body>
+</html>

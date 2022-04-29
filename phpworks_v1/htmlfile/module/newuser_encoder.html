@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <input id="aaa" type="text">
+    <input type="button" onclick="encode()" value="encode!">
+    <script>
+        function encode(){
+            var aa=document.getElementById("aaa").value;
+            //alert(aa);
+            aa=window.btoa(aa);
+            aa=window.btoa(aa);
+            alert(aa);
+        }
+    </script>
+</html>
