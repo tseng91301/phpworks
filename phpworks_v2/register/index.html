@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6QDEP0H0ZJ"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-6QDEP0H0ZJ');
+	</script>
+        <head>
+			
+            <meta charset="utf-8"/>
+	        <title>註冊 Register</title>
+	        <link href="/module/style.css" rel="stylesheet" >
+			<meta name="google-site-verification" content="wckxJU1daLfK2yDVIT6UCxz-rm2UXiye6-nG_5onam0" />
+        </head>
+        <body>
+			
+            <div class="wrap">
+                <div class="header" id="top">
+                    <h1>新身分註冊頁面</h1>
+                </div>
+                <div class="content">
+                    <div class="left">
+						
+                    </div>
+                    <div class="center">
+						<form method="post" action="/register/register.php" style="font-size: 23px;">
+							必填項目:<br/>
+							&emsp;請輸入帳號(不可用中文):<input type="text" name="ssid" placeholder="請輸入帳號" required><br/>
+							&emsp;請輸入Email:<input type="email" name="mail" placeholder="輸入email" required><br/>
+							&emsp;請輸入密碼:<input id="inputPassword" name="pass" type="password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" required oninput="setCustomValidity('');" oninvalid="setCustomValidity('請輸入正確的密碼格式:含英數至少六個字元');"/><br/>
+							&emsp;再次確認密碼:<input id="ConfirmPassword" name="pass2" type="password" required oninput="setCustomValidity('');" onchange="if(document.getElementById('inputPassword').value != document.getElementById('ConfirmPassword').value){setCustomValidity('密碼不吻合');}"/><br/>
+							非必填項目:<br/>
+							&emsp;真實姓名(填入英文姓名):<input type="text" name="realn" placeholder="輸入姓名"><br/>
+							&emsp;連絡電話:<input type="text" name="tele" placeholder="輸入電話"><br/>
+							<input type="checkbox" required>我同意將資料傳送給開發人員審閱<br/>
+							<input type="checkbox" required>我同意在此網站上使用cookie<br/>
+							<input type="submit" value="提交" onclick="alert('送出後將會寄送確認郵件，請用此裝置接收並點擊連結確認email，另外，請勿封鎖此網站的cookie，這會造成電子郵件失效')">
+						</form>
+						
+					</div>
+                </div>
+                
+                <div class="clearfix"></div>
+                <div class="footer" id="footer">
+				</div>
+            </div>
+			<script src="/module/jquery.min.js"></script>
+			<script>
+				$(function(){
+					/*公共部分
+					 * 導航欄
+					 * footer CopyRight
+					 */
+					$(".left").load("/module/content.html");
+					$(".footer").load("/module/footer.html");
+					
+				});
+			</script>
+        </body>
+</html>
